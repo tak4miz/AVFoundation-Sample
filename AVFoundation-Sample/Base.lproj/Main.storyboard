@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="P2L-3k-RwL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CameraViewController" customModule="AVFoundation_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="PreviewView" customModule="AVFoundation_Sample" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7XX-5Q-cNh">
+                                <rect key="frame" x="150" y="532" width="75" height="75"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eHo-LG-da1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7XX-5Q-cNh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:5" id="VYJ-KC-cDM"/>
+                            <constraint firstItem="7XX-5Q-cNh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="XyI-T9-wzc"/>
+                            <constraint firstItem="7XX-5Q-cNh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:5" id="qoa-E8-LZV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7XX-5Q-cNh" secondAttribute="bottom" constant="60" id="wrC-ah-IrV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FnS-ie-l2y">
+                        <barButtonItem key="rightBarButtonItem" image="camerachange" style="plain" id="uE5-dN-dIz">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity ">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="changeCamera:" destination="BYZ-38-t0r" id="gK6-qm-D77"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="previewView" destination="8bC-Xf-vdC" id="BT5-aK-yKq"/>
+                        <outlet property="takePhotoButton" destination="7XX-5Q-cNh" id="nvZ-Z7-z6a"/>
+                        <segue destination="D2D-XW-x4l" kind="show" identifier="toPreviewViewController" animates="NO" id="z8F-u9-AKe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064.8" y="62.518740629685162"/>
+        </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="yU7-Od-xAO">
+            <objects>
+                <viewController id="D2D-XW-x4l" customClass="PreviewViewController" customModule="AVFoundation_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Bj-7y-fgr"/>
+                        <viewControllerLayoutGuide type="bottom" id="drD-K8-90B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k3J-KE-pWd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PVr-2t-bWX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PVr-2t-bWX" firstAttribute="top" secondItem="k3J-KE-pWd" secondAttribute="top" id="0FL-me-gOb"/>
+                            <constraint firstItem="PVr-2t-bWX" firstAttribute="leading" secondItem="k3J-KE-pWd" secondAttribute="leading" id="D7E-x2-I6K"/>
+                            <constraint firstAttribute="trailing" secondItem="PVr-2t-bWX" secondAttribute="trailing" id="UuL-Hz-fLv"/>
+                            <constraint firstItem="drD-K8-90B" firstAttribute="top" secondItem="PVr-2t-bWX" secondAttribute="bottom" id="pLC-NJ-VBm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="previewView" destination="PVr-2t-bWX" id="Fo5-Dq-spC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BVp-bx-Sit" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1944.8" y="62.518740629685162"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QSl-yk-C9e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P2L-3k-RwL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="rb5-z9-OfF">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cv4-39-fJ1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fne-Ny-5s7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.59999999999999" y="62.518740629685162"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camerachange" width="30" height="30"/>
+    </resources>
+</document>

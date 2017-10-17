@@ -1,0 +1,20 @@
+
+/* Class = "UITableViewSection"; footerTitle = "無音にすると、解像度が少し低くなります。無音を解除するとシャッター音が鳴ります。"; ObjectID = "2U8-eM-H5q"; */
+"2U8-eM-H5q.footerTitle" = "無音にすると、解像度が少し低くなります。無音を解除するとシャッター音が鳴ります。";
+
+/* Class = "UITableViewSection"; footerTitle = "撮影したものをカメラロールに自動保存します。"; ObjectID = "3BI-g0-yTc"; */
+"3BI-g0-yTc.footerTitle" = "撮影したものをカメラロールに自動保存します。";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "JCg-rX-lCn"; */
+"JCg-rX-lCn.text" = "Title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "L4S-gk-PTI"; */
+"L4S-gk-PTI.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "設定"; ObjectID = "bV2-oA-7GZ"; */
+"bV2-oA-7GZ.title" = "設定";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "uE5-dN-dIz"; */
+"uE5-dN-dIz.title" = "Item";
+
+"qSg-IW-qKv.text" = "item";
