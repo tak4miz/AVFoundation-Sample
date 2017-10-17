@@ -14,12 +14,10 @@
 		BB84957A1EDB04B700D82862 /* IdentifierData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8495781EDB04B700D82862 /* IdentifierData.swift */; };
 		BB87933B1F961917002256D5 /* UIAlertView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87933A1F961917002256D5 /* UIAlertView+Extension.swift */; };
 		BBB19CD11ED3056B0079B0E2 /* UINavigationController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB19CD01ED3056B0079B0E2 /* UINavigationController+Extention.swift */; };
-		BBB19CD31ED5A96D0079B0E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB19CD21ED5A96D0079B0E2 /* Images.xcassets */; };
 		BBB19CD51ED5B0840079B0E2 /* AVCaptureDevice+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB19CD41ED5B0840079B0E2 /* AVCaptureDevice+Extention.swift */; };
 		BBB19CD71ED6EE1C0079B0E2 /* AVCaptureSession+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB19CD61ED6EE1C0079B0E2 /* AVCaptureSession+Extention.swift */; };
 		BBDC1B301EC9D33300302C33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC1B2F1EC9D33300302C33 /* AppDelegate.swift */; };
 		BBDC1B351EC9D33300302C33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDC1B331EC9D33300302C33 /* Main.storyboard */; };
-		BBDC1B381EC9D33300302C33 /* AVFoundation-Sample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BBDC1B361EC9D33300302C33 /* AVFoundation-Sample.xcdatamodeld */; };
 		BBDC1B3A1EC9D33300302C33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBDC1B391EC9D33300302C33 /* Assets.xcassets */; };
 		BBDC1B3D1EC9D33300302C33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDC1B3B1EC9D33300302C33 /* LaunchScreen.storyboard */; };
 		BBF1F26F1F94CC5D0031799E /* CameraViewController+UIGestureRecognizerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1F26E1F94CC5C0031799E /* CameraViewController+UIGestureRecognizerDelegate.swift */; };
@@ -30,17 +28,16 @@
 		BB29CD501ECB38CF005E5E49 /* CameraViewController+AVCapturePhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CameraViewController+AVCapturePhotoCaptureDelegate.swift"; sourceTree = "<group>"; };
 		BB29CD521ECB437A005E5E49 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		BB29CD541ECB4A7E005E5E49 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		BB4AC95C1F964BCC00C17672 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BB5EF6921EC9FBD0009E64FA /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		BB8495781EDB04B700D82862 /* IdentifierData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifierData.swift; sourceTree = "<group>"; };
 		BB87933A1F961917002256D5 /* UIAlertView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertView+Extension.swift"; sourceTree = "<group>"; };
 		BBB19CD01ED3056B0079B0E2 /* UINavigationController+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extention.swift"; sourceTree = "<group>"; };
-		BBB19CD21ED5A96D0079B0E2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		BBB19CD41ED5B0840079B0E2 /* AVCaptureDevice+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+Extention.swift"; sourceTree = "<group>"; };
 		BBB19CD61ED6EE1C0079B0E2 /* AVCaptureSession+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureSession+Extention.swift"; sourceTree = "<group>"; };
 		BBDC1B2C1EC9D33300302C33 /* AVFoundation-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AVFoundation-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDC1B2F1EC9D33300302C33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBDC1B341EC9D33300302C33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BBDC1B371EC9D33300302C33 /* AVFoundation-Sample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "AVFoundation-Sample.xcdatamodel"; sourceTree = "<group>"; };
 		BBDC1B391EC9D33300302C33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBDC1B3C1EC9D33300302C33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBDC1B3E1EC9D33300302C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -138,10 +135,9 @@
 				BBDC1B2F1EC9D33300302C33 /* AppDelegate.swift */,
 				BBDC1B331EC9D33300302C33 /* Main.storyboard */,
 				BBDC1B391EC9D33300302C33 /* Assets.xcassets */,
-				BBB19CD21ED5A96D0079B0E2 /* Images.xcassets */,
+				BB4AC95C1F964BCC00C17672 /* Images.xcassets */,
 				BBDC1B3B1EC9D33300302C33 /* LaunchScreen.storyboard */,
 				BBDC1B3E1EC9D33300302C33 /* Info.plist */,
-				BBDC1B361EC9D33300302C33 /* AVFoundation-Sample.xcdatamodeld */,
 			);
 			path = "AVFoundation-Sample";
 			sourceTree = "<group>";
@@ -222,7 +218,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBDC1B3D1EC9D33300302C33 /* LaunchScreen.storyboard in Resources */,
-				BBB19CD31ED5A96D0079B0E2 /* Images.xcassets in Resources */,
 				BBDC1B3A1EC9D33300302C33 /* Assets.xcassets in Resources */,
 				BBDC1B351EC9D33300302C33 /* Main.storyboard in Resources */,
 			);
@@ -235,7 +230,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBDC1B381EC9D33300302C33 /* AVFoundation-Sample.xcdatamodeld in Sources */,
 				BB29CD511ECB38CF005E5E49 /* CameraViewController+AVCapturePhotoCaptureDelegate.swift in Sources */,
 				BB84957A1EDB04B700D82862 /* IdentifierData.swift in Sources */,
 				BBB19CD71ED6EE1C0079B0E2 /* AVCaptureSession+Extention.swift in Sources */,
@@ -436,19 +430,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		BBDC1B361EC9D33300302C33 /* AVFoundation-Sample.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				BBDC1B371EC9D33300302C33 /* AVFoundation-Sample.xcdatamodel */,
-			);
-			currentVersion = BBDC1B371EC9D33300302C33 /* AVFoundation-Sample.xcdatamodel */;
-			path = "AVFoundation-Sample.xcdatamodeld";
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = BBDC1B241EC9D33300302C33 /* Project object */;
 }

@@ -71,45 +71,6 @@ class CameraViewController: UIViewController {
 
 extension CameraViewController: CAAnimationDelegate {
     
-    fileprivate func setupDisplay(){
-        navigationController?.presentTransparentNavigationBar()
-        navigationItem.backBarButtonItem?.title = ""
-        
-        takePhotoButton.layer.cornerRadius = (previewView.layer.bounds.width / 5) / 2
-        takePhotoButton.layer.borderWidth = 7
-        takePhotoButton.layer.borderColor = UIColor.white.cgColor
-    }
-    
-    fileprivate func setupCamera() {
-        previewView.session = session
-        
-        guard let camera = AVCaptureDevice.videoDevice() else { return }
-        
-        let deviceInput = try? AVCaptureDeviceInput(device: camera)
-        
-        if session.canAddInput(deviceInput) {
-            session.addInput(deviceInput)
-        }
-        
-        if self.session.canAddOutput(self.photoOutput) {
-            self.session.addOutput(self.photoOutput)
-        }
-        
-        self.session.sessionPreset = AVCaptureSessionPresetHigh
-        self.session.startRunning()
-        
-        do {
-            try camera.lockForConfiguration()
-            camera.activeVideoMinFrameDuration = CMTimeMake(1, 30)
-            camera.unlockForConfiguration()
-            
-        } catch {
-            // error
-        }
-        
-        self.activeVideoInput = deviceInput
-    }
-    
     func tapOnFocus(_ sender: UITapGestureRecognizer) {
         let tapPoint = sender.location(in: self.view)
         focus(tapPoint: tapPoint)
@@ -122,7 +83,7 @@ extension CameraViewController: CAAnimationDelegate {
         
         photoOutput.capturePhoto(with: captureSetting, delegate: self)
     }
-
+    
     @IBAction func changeCamera(_ sender: Any) {
         session.beginConfiguration()
         
@@ -150,6 +111,45 @@ extension CameraViewController: CAAnimationDelegate {
         focus(tapPoint: self.view.center)
     }
     
+    fileprivate func setupDisplay(){
+        navigationController?.presentTransparentNavigationBar()
+        navigationItem.backBarButtonItem?.title = ""
+        
+        takePhotoButton.layer.cornerRadius = (previewView.layer.bounds.width / 5) / 2
+        takePhotoButton.layer.borderWidth = 7
+        takePhotoButton.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    fileprivate func setupCamera() {
+        previewView.session = session
+        
+        guard let camera = AVCaptureDevice.videoDevice() else { return }
+        
+        let deviceInput = try? AVCaptureDeviceInput(device: camera)
+        
+        if session.canAddInput(deviceInput) {
+            session.addInput(deviceInput)
+        }
+        
+        if session.canAddOutput(self.photoOutput) {
+            session.addOutput(self.photoOutput)
+        }
+        
+        session.sessionPreset = AVCaptureSessionPresetHigh
+        session.startRunning()
+        
+        do {
+            try camera.lockForConfiguration()
+            camera.activeVideoMinFrameDuration = CMTimeMake(1, 30)
+            camera.unlockForConfiguration()
+            
+        } catch {
+            // error
+        }
+        
+        self.activeVideoInput = deviceInput
+    }
+    
     fileprivate func focus(tapPoint: CGPoint) {
         focusView.frame.size = CGSize(width: 120, height: 120)
         focusView.layer.cornerRadius = 60
@@ -175,7 +175,7 @@ extension CameraViewController: CAAnimationDelegate {
         }
     }
     
-    private func focusAtPoint(point: CGPoint) {
+    fileprivate func focusAtPoint(point: CGPoint) {
         guard let device = activeVideoInput.device else { return }
         
         if device.isFocusPointOfInterestSupported && device.isFocusModeSupported(.autoFocus) {
