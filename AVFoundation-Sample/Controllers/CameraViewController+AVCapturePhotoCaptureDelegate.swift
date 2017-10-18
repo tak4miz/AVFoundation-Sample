@@ -22,12 +22,10 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
             let photoData = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: buffer, previewPhotoSampleBuffer: previewPhotoSampleBuffer),
             let image = UIImage(data: photoData) else { return }
         
-        let orientedImage = activeVideoInput.device.position == .back ?
-            image :  UIImage(cgImage: image.cgImage!, scale: image.scale, orientation: .leftMirrored)
+        previewImage = activeVideoInput.device.position == .back ?
+            image :
+            UIImage(cgImage: image.cgImage!, scale: image.scale, orientation: .leftMirrored)
         
-        previewImage = orientedImage
-        
-        let identifier = Identifier.getString(status: .toPreviewViewController)
-        performSegue(withIdentifier: identifier, sender: nil)
+        performSegue(withIdentifier: Identifier.getString(status: .toPreviewViewController), sender: nil)
     }
 }

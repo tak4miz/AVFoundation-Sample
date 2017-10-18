@@ -72,8 +72,7 @@ class CameraViewController: UIViewController {
 extension CameraViewController: CAAnimationDelegate {
     
     func tapOnFocus(_ sender: UITapGestureRecognizer) {
-        let tapPoint = sender.location(in: self.view)
-        focus(tapPoint: tapPoint)
+        focus(tapPoint: sender.location(in: self.view))
     }
     
     @IBAction func takePhoto(_ sender: AnyObject) {
@@ -87,8 +86,9 @@ extension CameraViewController: CAAnimationDelegate {
     @IBAction func changeCamera(_ sender: Any) {
         session.beginConfiguration()
         
-        let newPosition: AVCaptureDevicePosition =
-            activeVideoInput.device.position == .back ? .front : .back
+        let newPosition = activeVideoInput.device.position == .back ?
+            AVCaptureDevicePosition.front :
+            AVCaptureDevicePosition.back
         
         guard let camera = AVCaptureDevice.videoDevice(for: newPosition) else {
             return
@@ -102,6 +102,7 @@ extension CameraViewController: CAAnimationDelegate {
                     self.session.addOutput(self.photoOutput)
                 }
                 self.activeVideoInput = deviceInput
+                
             case .error: break
             }
         }
@@ -144,7 +145,7 @@ extension CameraViewController: CAAnimationDelegate {
             camera.unlockForConfiguration()
             
         } catch {
-            // error
+            print("error : \(error)")
         }
         
         self.activeVideoInput = deviceInput

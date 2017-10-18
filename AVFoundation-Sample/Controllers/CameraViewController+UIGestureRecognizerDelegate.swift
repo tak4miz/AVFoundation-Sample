@@ -18,8 +18,11 @@ extension CameraViewController: UIGestureRecognizerDelegate {
         self.view.addGestureRecognizer(tapGesture)
     }
     
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool
-    {
-        return (touch.view?.isDescendant(of: takePhotoButton))! ? false : true
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if let isTouchTakeButton = touch.view?.isDescendant(of: takePhotoButton) {
+            return !isTouchTakeButton
+        }
+        
+        return true
     }
 }
